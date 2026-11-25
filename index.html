@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to mint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="stage">
+    <section class="auth" id="auth" role="dialog" aria-labelledby="auth-title" aria-describedby="auth-sub">
+      <canvas class="auth__field" id="field" aria-hidden="true"></canvas>
+      <div class="auth__rim" aria-hidden="true"></div>
+
+      <div class="auth__content">
+        <header class="auth__heading">
+          <div class="auth__top">
+            <div class="brand" id="brand" aria-label="mint">
+              <img src="assets/logo.svg" width="26.5743" height="21.2594" alt="" />
+            </div>
+            <button class="close" type="button" aria-label="Close">
+              <img src="assets/close.svg" width="19" height="19" alt="" />
+            </button>
+          </div>
+
+          <div class="auth__copy">
+            <h1 class="title" id="auth-title">
+              <span class="title__line">Welcome</span>
+              <span class="title__line">to <span class="title__mint">mint</span></span>
+            </h1>
+            <p class="sub" id="auth-sub">Login or register with your email</p>
+          </div>
+        </header>
+
+        <div class="cta">
+          <button class="btn btn--google magnetic" type="button">
+            <img class="btn__g" src="assets/google.svg" width="14" height="13.999" alt="" />
+            <span class="btn__label">Continue with google</span>
+          </button>
+
+          <div class="divider" aria-hidden="true">
+            <img src="assets/divider.svg" width="1" height="305" alt="" />
+          </div>
+
+          <form class="email" id="email-form" novalidate>
+            <label class="sr-only" for="email">Email address</label>
+            <input class="field" id="email" name="email" type="email" autocomplete="email"
+                   placeholder="Enter your email address" />
+            <button class="btn btn--primary magnetic" id="continue" type="submit">
+              <span class="btn__stack">
+                <span class="btn__text">Continue</span>
+                <span class="btn__text btn__text--done">Check your inbox ✓</span>
+              </span>
+              <span class="btn__sheen" aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
